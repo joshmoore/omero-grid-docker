@@ -18,7 +18,7 @@ RUN useradd omero && \
     mkdir /OMERO && \
     chown omero /OMERO
 
-ARG OMERO_VERSION=0.4.0-m2
+ARG OMERO_VERSION=0.4.0-2
 ARG CI_SERVER
 ARG OMEGO_ARGS=--downloadurl=https://downloads.openmicroscopy.org/idr
 
