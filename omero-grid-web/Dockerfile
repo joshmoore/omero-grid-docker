@@ -47,7 +47,10 @@ ADD run.sh /home/omero/
 # TODO: Remove me once the role is updated.
 USER root
 ENV OMERO_REQUIREMENTS_FILE /home/omero/OMERO.server/share/web/requirements-py27.txt
+ENV REDIS_REQUIREMENTS_FILE /home/omero/OMERO.server/share/web/requirements-redis.txt
 RUN test -f $OMERO_REQUIREMENTS_FILE && pip install -r $OMERO_REQUIREMENTS_FILE
+RUN test -f $REDIS_REQUIREMENTS_FILE && pip install -r $REDIS_REQUIREMENTS_FILE
+
 USER omero
 
 EXPOSE 8080
